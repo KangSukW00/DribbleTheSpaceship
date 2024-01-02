@@ -6,7 +6,7 @@ Player::Player(sf::Vector2f pos, float size, sf::Color color, float speed)
 		shape = sf::RectangleShape(sf::Vector2f{ size, size });
 		shape.setFillColor(color);
 }
-void Player::Update()	//ÇÃ·¹ÀÌ¾îÀÇ µ¿ÀÛ
+void Player::Update()	//í”Œë ˆì´ì–´ì˜ ë™ì‘
 {
 	ProcessInput();
 	shape.setPosition(position);
@@ -22,7 +22,7 @@ sf::Vector2f Player::GetPosition() const
 	return position;
 }
 
-void Player::ProcessInput()		//ÀÔ·Â Ã³¸®
+void Player::ProcessInput()		//ì…ë ¥ ì²˜ë¦¬
 {
 	bool dPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::D);
 	bool aPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::A);
