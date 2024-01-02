@@ -11,9 +11,9 @@ public:
         const Player* player);
     Enemy();
 
-    void Update();  //µ¿ÀÛ
+    void Update();  //ÂµÂ¿Ã€Ã›
 
-    void Draw(sf::RenderWindow& window);    //±×¸®±â
+    void Draw(sf::RenderWindow& window);    //Â±Ã—Â¸Â®Â±Ã¢
 
     sf::Vector2f GetPosition() const;
 
