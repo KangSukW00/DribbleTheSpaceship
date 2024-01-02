@@ -20,7 +20,7 @@
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	//_CrtSetBreakAlloc(2508); // ´©¼ö°¡ ÀÖ´Â °æ¿ì ÇÒ´ç ¹øÈ£·Î Áß´Ü ¼³Á¤
+	//_CrtSetBreakAlloc(2508); // ëˆ„ìˆ˜ê°€ ìˆëŠ” ê²½ìš° í• ë‹¹ ë²ˆí˜¸ë¡œ ì¤‘ë‹¨ ì„¤ì •
 	
 
 	int screenWidth = 800;
@@ -57,15 +57,15 @@ int main()
 				window.close();
 		}
 		
-		//ÇÃ·¹ÀÌ¾î ÀÌµ¿ ·ÎÁ÷
+		//í”Œë ˆì´ì–´ ì´ë™ ë¡œì§
 		player.Update();
 
-		//Àû ÀÌµ¿ ·ÎÁ÷
+		//ì  ì´ë™ ë¡œì§
 		for (int i = 0; i < enemyCount; i++) {
 			enemies[i].Update();
 		}
 
-		window.clear();		//1)Áö¿ì±â
+		window.clear();		//1)ì§€ìš°ê¸°
 		{
 			player.Draw(window);
 
@@ -73,7 +73,7 @@ int main()
 				enemies[i].Draw(window);
 			}
 		}
-		window.display();	//3)Ç¥½ÃÇÏ±â
+		window.display();	//3)í‘œì‹œí•˜ê¸°
 
 	}
 	delete[] enemies;
