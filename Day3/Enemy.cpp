@@ -34,13 +34,13 @@ sf::Vector2f Enemy::GetPosition() const
 void Enemy::UpdatePosition()
 {
 	
-	float enemyToPlayerX = playerRef->GetPosition().x - position.x;		//Àû°ú ³ªÀÇ xÂ÷ÀÌ
-	float enemyToPlayerY = playerRef->GetPosition().y - position.y;		//Àû°ú ³ªÀÇ yÂ÷ÀÌ
+	float enemyToPlayerX = playerRef->GetPosition().x - position.x;		//ì ê³¼ ë‚˜ì˜ xì°¨ì´
+	float enemyToPlayerY = playerRef->GetPosition().y - position.y;		//ì ê³¼ ë‚˜ì˜ yì°¨ì´
 
 	float length = sqrt(enemyToPlayerX * enemyToPlayerX + enemyToPlayerY * enemyToPlayerY);
-	//ÇÇÅ¸°í¶ó½ºÁ¤¸® ÀÌ¿äÇØ¼­ µÎ ÁÂÇ¥ °Å¸®¸¦ ±¸ÇÑ°Í : ·çÆ®(xÀÇÂ÷ÀÌ^2 + yÀÇÂ÷ÀÌ^2)
+	//í”¼íƒ€ê³ ë¼ìŠ¤ì •ë¦¬ ì´ìš”í•´ì„œ ë‘ ì¢Œí‘œ ê±°ë¦¬ë¥¼ êµ¬í•œê²ƒ : ë£¨íŠ¸(xì˜ì°¨ì´^2 + yì˜ì°¨ì´^2)
 
-	enemyToPlayerX /= length;		//ÇÃ·¹ÀÌ¾î·Î ÇâÇÏ´Â ÀûÀÇ º¤ÅÍ Å©±â 1Â¥¸®¸¦ ±¸ÇÑ°Í
+	enemyToPlayerX /= length;		//í”Œë ˆì´ì–´ë¡œ í–¥í•˜ëŠ” ì ì˜ ë²¡í„° í¬ê¸° 1ì§œë¦¬ë¥¼ êµ¬í•œê²ƒ
 	enemyToPlayerY /= length;
 
 	position.x += enemyToPlayerX * speed;
